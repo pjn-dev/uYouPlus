@@ -118,9 +118,8 @@ jobs:
       - name: Prepare YouTube iPA
         id: prepare_youtube
         run: |
-          ls
-          ls main/
-          wget "YOUTUBE_URL" --no-verbose -O main/YouTube.ipa
+          wget "$YOUTUBE_URL" --no-verbose -O main/YouTube.ipa
+          md5sum main/YouTube.ipa
           cd ${{ github.workspace }}/main
           mv YouTube.ipa YouTube.zip
           unzip -q YouTube.zip
