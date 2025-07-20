@@ -119,7 +119,7 @@ jobs:
         id: prepare_youtube
         run: |
           ls
-          la main/
+          ls main/
           wget "YOUTUBE_URL" --no-verbose -O main/YouTube.ipa
           cd ${{ github.workspace }}/main
           mv YouTube.ipa YouTube.zip
