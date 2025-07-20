@@ -117,6 +117,7 @@ jobs:
 
       - name: Prepare YouTube iPA
         id: prepare_youtube
+        shell: bash
         run: |
           wget "$YOUTUBE_URL" --no-verbose -O main/YouTube.ipa
           md5sum main/YouTube.ipa
